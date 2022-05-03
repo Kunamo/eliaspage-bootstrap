@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en" class="h-100" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,14 +12,44 @@
 <body class="h-100" style="background-color: red">
 
 <!-- PINK = Single Page -->
-<div class="SP h-100" style="background-color: palevioletred">
-    <!-- Collapse Button DOING-->
-        <!-- Navbar Slide In DOING-->
-    <nav clas="navbar fixed-top">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"/>
-            </div>
-    </nav>
+<div class="SP h-100" style="background-color: palevioletred; position: relative;">
+    <!-- Collapse Button DOING, UPDATE: Functionality DONE-->
+        <!-- Navbar Slide In DOING, UPDATE: Functionality DONE-->
+    <!-- DESC: "Slide In Menu" / Offcanvas Navbar-->
+<!--    <nav clas="navbar fixed-top" style="background-color: dodgerblue">-->
+<!--            <div class="" style="background-color: dodgerblue">-->
+                <!-- DESC: Toggler Button-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" style="background-color: dodgerblue; z-index: 1; position: absolute">
+                    <span class="navbar-toggler-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
+                    </span> <!-- Icon not appearing, maybe because missing referring elements of navbar or no icon import-->
+                </button>
+                <!-- DESC: Offcanvas Section / "Slide In Menu"-->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <!-- DESC: Title of "Slide In Menu"-->
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">My Page</h5>
+                        <!-- DESC: Close Button inside "Slide In Menu"-->
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <!-- DESC: Body of "Slide In Menu"-->
+                    <div class="offcanvas-body">
+                        <!-- DESC: Items for "Slide In Menu"-->
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <!-- DESC: Item-->
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Home</a>
+                            </li>
+                            <!-- DESC: Item-->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Another Link</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+<!--            </div>-->
+<!--    </nav>-->
 
     <video autoplay="true" muted="true" playsinline width="100%" class="h-100">
         <source src="../assets/Testmovie.mp4"
