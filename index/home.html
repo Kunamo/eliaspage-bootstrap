@@ -60,8 +60,8 @@
                 <!--PROBLEM: Image style breaks responsivness of slide-in-menu, gh issue was created = #7-->
                 <img src="../assets/png_losless_100_cropped_upclose.png" alt="A headshot / Portrait of me" class="rounded" id="headshot" style="visibility: hidden; z-index: 1; position: absolute; width: 400px; left: 50%; right: 50%; top: 50%"> <!-- TODO: Better positioning, duplicate of PROBLEM / Issue #7-->
 
-                <!-- Insert Triangle Button here AFTER Video Playback, UDPATE: Issue created, WORK IN PROGRESS: -->
-                <button type="button" style="background-color: coral; z-index: 1; position: absolute; left: 50%; right: 50%; top: 80%">
+                <!-- Insert Triangle Button here AFTER Video Playback, UDPATE: Issue created, WORK IN PROGRESS, UPDATE: Issue (#4) done-->
+                <button type="button" id="cta-scroll" style="visibility:hidden; background-color: coral; z-index: 1; position: absolute; left: 50%; right: 50%; top: 80%">
                     <span class="btn-inner--icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
@@ -78,9 +78,10 @@
             crossorigin="anonymous">
     </script>
     <script>
-        //Make portrait image appear after video playback
+        //Make portrait image and cta-scroll button appear after video playback
         document.getElementById("intro-video").onended = function() {
             document.getElementById("headshot").style.visibility = "visible";
+            document.getElementById("cta-scroll").style.visibility = "visible";
         };
     </script>
 </body>
