@@ -1,6 +1,0 @@
-Updated and added semantic comments to code
-
-expand #3 "Add Portrait over video, (appear after video playbak / timer) and Mousehover #3" Closed
-
-created new issue #7, #8, #9
-

@@ -47,29 +47,15 @@
                         </ul>
                     </div>
                 </div>
-
 <!--            </div>-->
 <!--    </nav>-->
 
-                <video autoplay="true" muted="true" playsinline width="100%" class="h-100" id="intro-video">
-                    <source src="../assets/Testmovie.mp4"
-                            type="video/mp4">
-                </video>
-                <!--TODO: Replace / put on top of video element the last-frame.svg, Issue #8-->
-
-                <!--Insert image of myself here AFTER Video Playback and make Image interactive by mouseover, UDPATE: Issue created, UPDATE: Made appear after video-playback, but no mousover compatibility yet due video (white background and handwritting is on the same layer (in html = z-index)) Issue #9, old issue #3 closed-->
-                <!--PROBLEM: Image style breaks responsivness of slide-in-menu, gh issue was created = #7-->
-                <img src="../assets/png_losless_100_cropped_upclose.png" alt="A headshot / Portrait of me" class="rounded" id="headshot" style="visibility: hidden; z-index: 1; position: absolute; width: 400px; left: 50%; right: 50%; top: 50%"> <!-- TODO: Better positioning, duplicate of PROBLEM -->
-
-
-                <!-- Insert Triangle Button here AFTER Video Playback, UDPATE: Issue created, UPDATE: Working on expand-->
-                <button type="button" style="background-color: coral; z-index: 1; position: absolute; left: 50%; right: 50%; top: 80%">
-                    <span class="btn-inner--icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                        </svg>
-                    </span>
-                </button>
+    <video autoplay="true" muted="true" playsinline width="100%" class="h-100">
+        <source src="../assets/Testmovie.mp4"
+                type="video/mp4">
+    </video>
+        <!--Insert image of myself here AFTER Video Playback and make Image interactive by mouseover, UDPATE: Issue created-->
+            <!-- Insert Triangle Button here AFTER Video Playback, UDPATE: Issue created-->
 </div>
 <!-- BLUE = Scroll Content -->
 
@@ -78,12 +64,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous">
-    </script>
-    <script>
-        //Make portrait image appear after video playback
-        document.getElementById("intro-video").onended = function() {
-            document.getElementById("headshot").style.visibility = "visible";
-        };
     </script>
 </body>
 </html>
