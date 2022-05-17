@@ -29,7 +29,7 @@
                     <!-- DESC: Title of "Slide In Menu"-->
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Elias Ben Jurkeit</h5>
-                        <!-- DESC: Close Button inside "Slide In Menu"-->
+                        <!-- DESC: Close Button inside "Slide In Menu" -->
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <!-- DESC: Body of "Slide In Menu"-->
@@ -57,6 +57,12 @@
                 <!--From Issue #8: TODO: Replace / put on top of video element the last-frame.svg-->
 
                 <!--Insert image of myself here AFTER Video Playback and make Image interactive by mouseover, UDPATE: Issue created, UPDATE: Made appear after video-playback, but no mousover compatibility yet due video (white background and handwritting is on the same layer (in html = z-index))  Issue #3 closed, Issued #9 and #8 opened in response to bug-->
+                <!-- Working on that -->
+                <!-- Insert Last Frame, make z-index higher than vid -->
+                <img src="../assets/Lastframe.svg" alt="Last Frame" class="h-100" width="100%" id="lastFrame-ofIntroVideo" style="visibility: hidden; z-index: 10">
+
+
+                <!-- DESC: Footer -->
                 <!--PROBLEM: Image style breaks responsivness of slide-in-menu, gh issue was created = #7-->
                 <img src="../assets/png_losless_100_cropped_upclose.png" alt="A headshot / Portrait of me" class="rounded" id="headshot" style="visibility: hidden; z-index: 1; position: absolute; width: 400px; left: 50%; right: 50%; top: 50%"> <!-- TODO: Better positioning, duplicate of PROBLEM / Issue #7-->
 
@@ -83,6 +89,7 @@
         document.getElementById("intro-video").onended = function() {
             document.getElementById("headshot").style.visibility = "visible";
             document.getElementById("cta-scroll").style.visibility = "visible";
+            document.getElementById("lastFrame-ofIntroVideo").style.visibility = "visible";
         };
     </script>
 </body>
